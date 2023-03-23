@@ -12,8 +12,7 @@ def cli(ctx):
 @click.pass_context
 @click.argument('message')
 def chatgpt(ctx, message):
-    click.echo('start sub')
-    click.echo(">" + message)
+    click.echo("> " + message)
     print(chat(message))
 
 
