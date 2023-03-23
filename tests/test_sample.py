@@ -1,4 +1,4 @@
-from nassypy import __version__
+from ai import __version__
 
 
 def test_version():
