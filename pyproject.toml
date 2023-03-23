@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nassypy"
+name = "ai"
 version = "0.1.0"
 description = "skeleton cli"
 authors = ["Niten Nashiki <niten.nashiki@lightz-inc.com>"]
@@ -10,6 +10,8 @@ repository = "https://github.com/nnashiki/python-cli-app-skeleton"
 [tool.poetry.dependencies]
 python = "^3.9"
 click = "^8.1.3"
+openai = "^0.27.2"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
@@ -46,7 +48,7 @@ exclude = '''
 profile = "black"
 
 [tool.taskipy.variables]
-packege = "nassypy"
+packege = "ai"
 test_package = "tests"
 
 [tool.taskipy.tasks]
@@ -58,4 +60,4 @@ test = { cmd = "pytest {test_package} -s -v", use_vars = true }
 fmt = { cmd = "task black && task isort", help = "format code" }
 
 [tool.poetry.scripts]
-nassypy = "nassypy.cli:cli"
+ai = "ai.cli:cli"
